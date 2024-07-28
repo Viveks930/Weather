@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: cool;
+    src: url(font.ttf);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* border: 2px solid rgb(4, 255, 0); */
+    background-image: url('mist.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body::before{
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+h1{ 
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #000000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+    font-family: cool;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid green; */
+    /* width: 18vw; */
+    color: white;
+    /* margin: 5%; */
+    font-size: 6rem;
+}
+.box{
+    /* border: 2px solid slateblue; */
+    /* width: 50vw; */
+    /* height: 20vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    justify-content: space-around;
+}
+.box input{
+    background: rgb(244,16,16);
+    background: linear-gradient(90deg, rgba(244,16,16,0.8) 0%, rgba(243,126,58,0.8) 51%, rgba(255,255,255,0.7) 100%);
+    height: 5vh;
+    width: 39vw;
+    border-radius: 20px;
+    border-style: hidden;
+    padding: 20px;
+    color: black;
+    font-weight: 700;
+}
+::placeholder{
+    color: black;
+}
+.box img{
+    width: 2em;
+    margin: 3px 8px;
+}
+.innerbox{
+    display: flex;
+}
+.search:hover{
+    cursor: pointer;
+
+}
+.display{
+    text-transform: lowercase;
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 15px;
+    /* margin: 25px; */
+    flex-direction: column;
+    color: white;
+    font-family: cool;
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.display p{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+.dip{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+#temp{
+    color: rgb(230, 134, 120);
+    font-size: 4rem;
+    background: rgb(0,5,25);
+background: linear-gradient(90deg, rgba(0,5,25,1) 0%, rgba(58,217,243,0.7) 57%, rgba(255,255,255,1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#flike{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+#sky{
+    color: rgb(152, 231, 247);
+    font-size: 2.5rem;
+}
+#wind{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+/* Mobile CSS */
+
+@media screen and (max-width:625px){
+    h1{
+        font-size: 3.5rem;
+    }
+    .box input{
+        width: 70vw;
+        margin-top: 10px;
+    }
+    .box img{
+        width: 2.5rem;
+        margin-top: 12px;
+    }
+    .display{
+        width: 100vw;
+    }
+    .dip{
+        /* border: 2px solid red; */
+        width: 100vw;
+        justify-content: space-evenly;
+       
+    }
+    #wind{
+        width: 57vw;
+    }
+}
